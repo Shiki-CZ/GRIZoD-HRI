@@ -7,7 +7,7 @@
 
 GRIZoD-HRI is an algorithm designed to optimize interaction zones between humans and robots by leveraging the Golden Ratio for spatial distribution. This approach enhances safety and comfort in Human-Robot Interaction (HRI) scenarios by defining natural, balanced zones that guide robot behavior.
 <div align="center">
-  <img src="assets/distribution.gif" alt="Default Zone Distribution" />
+  <img src="assets/distribution.png" alt="Default Zone Distribution" />
 </div>
 <div align="center">
   <img src="assets/demo.gif" alt="GRIZoD-HRI Demo" />
