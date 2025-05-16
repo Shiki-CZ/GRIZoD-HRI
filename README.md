@@ -43,4 +43,3 @@ To run GRIZoD-HRI, you need to install the **ZED SDK** by [Stereolabs](https://w
 ```bash
 git clone https://github.com/Shiki-CZ/GRIZoD-HRI.git
 cd GRIZoD-HRI
-# Add installation instructions here if needed
