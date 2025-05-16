@@ -10,7 +10,7 @@ GRIZoD-HRI is an algorithm designed to optimize interaction zones between humans
   <img src="assets/distribution.png" alt="Default Zone Distribution" width="500"/>
 </div>
 
-This algorithm was developed and tested with use of ZED 2i depth camera from Stereolabs. 
+This algorithm was developed using Stereolabs' ZED 2i depth camera and tested on the quadruped robot Unitree Go1 and the wheeled robot Agilex Scout Mini. 
 
 <div align="center">
   <img src="assets/demo.gif" alt="GRIZoD-HRI Demo" width="500" />
