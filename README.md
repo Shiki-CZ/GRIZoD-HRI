@@ -9,6 +9,9 @@ GRIZoD-HRI is an algorithm designed to optimize interaction zones between humans
 <div align="center">
   <img src="assets/distribution.png" alt="Default Zone Distribution" width="500"/>
 </div>
+
+This algorithm was developed and tested with use of ZED 2i depth camera from Stereolabs. 
+
 <div align="center">
   <img src="assets/demo.gif" alt="GRIZoD-HRI Demo" width="500" />
 </div>
@@ -17,10 +20,21 @@ GRIZoD-HRI is an algorithm designed to optimize interaction zones between humans
 
 ## Features
 
-- Calculates interaction zones using the Golden Ratio  
-- Balances safety and comfort spaces for effective HRI  
+- Calculates personal comfort zones using the Golden Ratio.
+- Dynamic adjustment of zones based on relative human-robot velocity.  
+- Safety zone is defined by ISO 13482:2014 and ISO 13855:2010 standard.  
 - Adaptable to various robot platforms and environments  
-- Enables dynamic adjustment of zones based on real-time data  
+- Dynamic robot velocity based on 2D Gaussian function  
+
+---
+
+## Prerequisites
+
+To run GRIZoD-HRI, you need to install the **ZED SDK** by [Stereolabs](https://www.stereolabs.com/developers/).
+
+- The ZED SDK provides depth sensing and spatial mapping capabilities essential for the algorithm.
+- Please follow the official installation instructions for your operating system:  
+  [ZED SDK Downloads and Installation](https://www.stereolabs.com/developers/)
 
 ---
 
