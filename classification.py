@@ -1,19 +1,17 @@
-import pyzed.sl as sl
-from cv_viewer.utils import render_object
 from cv_viewer.tracking_viewer import cvt
 from collections import defaultdict
 
 def classify(left_display, img_scale, objects, yolo_model):
-    if yolo_model != None:
-        for obj in objects.extendedObjectsList:
-            if obj.tracking_state.name != "TERMINATE":
-                # Display image scaled 2D bounding box
-                top_left_corner = cvt(obj.bounding_box_2d[0], img_scale)
-                bottom_right_corner = cvt(obj.bounding_box_2d[2], img_scale)
+    for obj in objects.extendedObjectsList:
+        if obj.tracking_state.name != "TERMINATE":
+            # Display image scaled 2D bounding box
+            top_left_corner = cvt(obj.bounding_box_2d[0], img_scale)
+            bottom_right_corner = cvt(obj.bounding_box_2d[2], img_scale)
 
-                cutout = left_display.copy()
-                cutout = cutout[int(top_left_corner[1]):int(bottom_right_corner[1]), int(top_left_corner[0]):int(bottom_right_corner[0])]
-                cutout = cutout[..., :3]
+            cutout = left_display.copy()
+            cutout = cutout[int(top_left_corner[1]):int(bottom_right_corner[1]), int(top_left_corner[0]):int(bottom_right_corner[0])]
+            cutout = cutout[..., :3]
+            if cutout is not None and not cutout.size == 0:
                 class_results = yolo_model(source=cutout, show=False, device=0, verbose=False)  # predict on an image
                 obj.className = class_results[0].names[class_results[0].probs.top1]
                 obj.classNumber = class_results[0].probs.top1

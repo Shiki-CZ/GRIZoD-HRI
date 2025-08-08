@@ -245,7 +245,6 @@ class TrackingViewer:
         zone = (0, 0, 255)
         for track in self.tracklets:
             clr = generate_color_id_u(track.class_id)
-            print("Track ID: ", track.class_id)
             cv_start_point = self.to_cv_point(track.positions[0].get_xyz(), current_camera_pose)
             cv_actual_point = self.to_cv_point(track.positions[-1].get_xyz(), current_camera_pose) # aktualni pozice cloveka
             text_color = (0, 0, 0, 255)
