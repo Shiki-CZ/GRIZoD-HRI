@@ -19,7 +19,7 @@ This algorithm was developed using Stereolabs' ZED 2i depth camera and tested on
 
 ---
 
-## Features
+## Features :star2:
 
 - Calculates personal comfort zones using the Golden Ratio.
 - Dynamic adjustment of zones based on relative human-robot velocity.  
@@ -39,8 +39,11 @@ To run GRIZoD-HRI, you need to install the **ZED SDK** by [Stereolabs](https://w
 
 ---
 
-## Installation
+## Installation :hammer_and_wrench:
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libraries. This process may take a long time.
 
 ```bash
 git clone https://github.com/Shiki-CZ/GRIZoD-HRI.git
 cd GRIZoD-HRI
+pip install -r requirements.txt
