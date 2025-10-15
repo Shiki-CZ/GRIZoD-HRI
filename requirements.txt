@@ -1,0 +1,15 @@
+# Requirements for Windows (x86_64) with Python 3.8
+# Notes:
+# - 'pyzed' requires the Stereolabs ZED SDK to be pre-installed on Windows.
+# - Pinned versions chosen for Py3.8 compatibility and stable Windows wheels.
+# - If you have a GPU/CUDA, install the matching CUDA builds of torch/torchvision from https://pytorch.org/get-started/locally/
+
+numpy==1.24.4              # last NumPy series broadly compatible with Py3.8
+opencv-python==4.8.1.78    # OpenCV wheels for Windows/Py3.8
+requests>=2.28,<3
+torch==2.1.0               # PyTorch CPU (default pip build) compatible with Py3.8
+torchvision==0.16.0        # Must match torch 2.1.x
+ultralytics==8.0.196       # Works with torch 2.1 + Py3.8
+
+# Optional / hardware-specific:
+pyzed                      # Requires ZED SDK; install SDK first on Windows
